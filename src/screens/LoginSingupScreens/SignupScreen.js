@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text,StyleSheet, TextInput, TouchableOpacity,TextField,ScrollView,StatusBar,currentHeight } from 'react-native'
+import { View, Text,StyleSheet, TextInput, TouchableOpacity,TextField,ScrollView,StatusBar,currentHeight, Image} from 'react-native'
 import { titles, colors, btn1, hr80} from '../../globals/style'
 import { AntDesign } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
@@ -113,7 +113,7 @@ const SignupScreen = ({navigation}) => {
         }} />
       </View>
 {/* confirm password end */}     
-<Text style={styles.address}>Please enter address</Text>
+{/* <Text style={styles.address}>Please enter address</Text> */}
     <View style={styles.inputout}
       color={addressfocus === true? colors.text1 : colors.text2} >
         <FontAwesome name="address-book" size={24} color={addressfocus === true ? colors.text1 : colors.text2} />
@@ -138,7 +138,7 @@ const SignupScreen = ({navigation}) => {
 
       {/* <Text style={styles.forgot}>Forgot Password</Text> */}
       <Text style={styles.or}>OR</Text>
-      <Text style={styles.gftxt}>Sign In With</Text>
+      {/* <Text style={styles.gftxt}>Sign In With</Text> */}
 
       <View style={styles.gf}>
         <TouchableOpacity>
@@ -261,5 +261,12 @@ const styles= StyleSheet.create({
     textAlign: 'center',
     marginVertical:20,
   },
+  swiperimage:{
+    width: '20%',
+    height: '20%',
+    margin:10,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+  }
 });
 export default SignupScreen
